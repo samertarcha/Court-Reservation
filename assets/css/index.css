@@ -1,0 +1,233 @@
+* {
+    touch-action: none;
+}
+
+html,
+body{
+    touch-action: none;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    position: relative;
+}
+
+main {
+    height: 100%;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5em;
+}
+
+form input {
+    outline: none;
+}
+
+input {
+    border-radius: 3rem;
+    margin: 0 auto;
+}
+
+.header {
+    width: fit-content;
+    background-color: var(--primary-red);
+    border-radius: 3rem;
+    box-shadow: var(--primary-boxShadow);
+    margin: 3em auto;
+    padding: .5em 1em;
+    justify-content: center;
+    position: absolute;
+    inset: 2vh auto auto auto;
+}
+
+.header h1 {
+    color: var(--white-background);
+    text-align: center;
+    padding: 0.1em .5em;
+}
+
+.main-parent {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100vw;
+    height: 100%;
+
+}
+
+.main-parent::-webkit-scrollbar {
+    display: none;
+}
+
+.main {
+    padding-inline: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80vw;
+    border-radius: 0.5em;
+
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.container-sign-up {
+    flex-direction: row-reverse;
+}
+
+.sign-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5em 5em;
+    gap: 1em;
+    width: 60%;
+}
+
+.upper h2 {
+    margin-bottom: 1em;
+}
+
+.logos {
+    margin: 1em auto;
+    cursor: pointer;
+}
+
+.logos .google {
+    width: 6.5rem;
+}
+
+input[type="text"],
+[type="password"] {
+    width: 100%;
+    border: none;
+    padding: 0.7em;
+    font-size: 2rem;
+}
+
+input[type="text"]:focus,
+[type="password"]:focus {
+    border: 2px solid grey;
+}
+
+.btn-sign-in {
+    width: fit-content;
+    background-color: var(--primary-red);
+    color: var(--white-background);
+    border: none;
+    padding: 0.25em .8em;
+    font-size: 2.5rem;
+    margin-top: 0.7em;
+    cursor: pointer;
+    transition: transform 500ms ease;
+}
+
+.btn-sign-in:hover {
+    background-color: rgba(165, 28, 49, 0.9);
+}
+
+.sign-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+}
+
+.sign-up-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.sign-up-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-red);
+    margin-bottom: 4em;
+    border-radius: 5rem;
+    padding: 5em 8em;
+    gap: 1em;
+    box-shadow: var(--primary-boxShadow);
+}
+
+.sign-up h2 {
+    color: var(--white-background);
+}
+
+.btn-sign-up {
+    width: fit-content;
+    background-color: var(--white-background);
+    color: var(--primary-red);
+    border: none;
+    font-size: 2.5rem;
+    margin-top: 0.7em;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 3rem;
+    padding: 0.45em 1em;
+    transition: transform 500ms ease;
+}
+
+.btn-sign-up:hover {
+    background-color: var(--white-background);
+    transform: scale(1.05);
+}
+
+.f-l-name {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.f-l-name input[type="text"] {
+    width: 49%;
+}
+
+@media (max-width: 650px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sign-up-main {
+        justify-content: flex-start;
+    }
+
+    .sign-in {
+        width: 100%;
+    }
+
+    .sign-up {
+        width: 100%;
+    }
+}

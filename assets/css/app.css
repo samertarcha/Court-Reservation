@@ -1,0 +1,182 @@
+:root {
+    font-size: 62.5%;
+
+    --primary-red: #a51c30;
+    --white-background: rgba(255, 255, 255, 0.946);
+
+    --primary-boxShadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+body {
+    overflow: hidden;
+}
+
+html {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.054);
+}
+
+main {
+    position: relative;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+btn {
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.right {
+    right: 0;
+}
+
+.left {
+    left: 0;
+}
+
+.padding-right-2em {
+    padding-right: 2em;
+}
+
+.padding-left-5em {
+    padding-left: 5em;
+}
+
+.available {
+    background-color: rgb(126, 255, 124);
+    color: rgb(2, 140, 0);
+    border-radius: 0.5em;
+}
+
+.in-use {
+    background-color: rgb(255, 201, 131);
+    color: rgb(236, 114, 0);
+    border-radius: 0.5em;
+}
+
+.not-available {
+    background-color: rgb(255, 132, 132);
+    color: var(--primary-red);
+    border-radius: 0.5em;
+}
+
+/* Sweet Alert */
+.swal2-popup {
+    font-size: 1.6rem !important;
+}
+
+.swal2-styled.swal2-confirm {
+    background-color: var(--primary-red) !important;
+}
+
+.swal2-styled.swal2-confirm:focus {
+    box-shadow: none !important;
+}
+
+
+/* Animations */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes opacity0To1 {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes backToInitial {
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+/* Responsive Design */
+@media (min-width: 1200px) and (max-width: 1600px) {
+    :root {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 1200px) {
+    :root {
+        font-size: 48%;
+    }
+}
+
+@media (max-width: 1040px) {
+    :root {
+        font-size: 45%;
+    }
+}
+
+@media (max-width: 976px) {
+    :root {
+        font-size: 40%;
+    }
+}
+
+@media (max-width: 852px) {
+    :root {
+        font-size: 35%;
+    }
+}
+
+@media (max-width: 750px) {
+    :root {
+        font-size: 25%;
+    }
+}
+
+@media (max-width: 650px) {
+    :root {
+        font-size: 45%;
+    }
+}
+
+@media (max-width: 575px) {
+    :root {
+        font-size: 40%;
+    }
+}
+
+@media (max-width: 425px) {
+    :root {
+        font-size: 35%;
+    }
+}
+
+@media (max-width: 375px) {
+    :root {
+        font-size: 27.5%;
+    }
+}

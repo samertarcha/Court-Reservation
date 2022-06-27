@@ -1,0 +1,208 @@
+body {
+    overflow: hidden; 
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.court-info {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    gap: .5em;
+}
+
+.info-col {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    font-size: 1.75rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 0.5em;
+}
+
+.label {
+    font-size: 1.8rem;
+}
+
+.availability {
+    padding: .25em .5em;
+}
+
+.parent-container {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2.5em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 30vw;
+    max-width: 450px;
+
+    background-color: var(--white-background);
+    text-align: center;
+    box-shadow: var(--primary-boxShadow);   
+    
+    transform: translateY(500%);
+    animation: backToInitial 1.5s ease forwards;
+}
+
+.cardF {
+    animation-delay: 200ms;
+}
+
+.cardB {
+    animation-delay: 500ms;
+}
+
+.cardT {
+    animation-delay: 800ms;
+}
+
+.content {
+    z-index: -2;
+    position: absolute;
+    inset: auto 0 0 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #fff;   
+    box-shadow: var(--primary-boxShadow);   
+
+    transition: all 500ms ease-in-out;
+}
+
+.toggleContent {
+    z-index: 2;
+    position: absolute;
+    inset: auto 0 0 0;
+    color: var(--white-background); 
+    font-size: 3rem;
+    padding: .5em;
+    transition: all 500ms ease-in-out;
+
+    /* animation: bounce 1s infinite 1s; */
+}
+
+#toggleContentF.active,
+#toggleContentB.active,
+#toggleContentT.active {
+    transform: rotateX(180deg);
+}
+
+#contentF.active,
+#contentB.active,
+#contentT.active {
+    transform: translateY(100%);
+}
+
+.label a {
+    font-size: 1.3rem;
+}
+
+.cta-check-reservation {
+    background-color: var(--primary-red);
+    font-size: 2.25rem;
+    color: var(--white-background);
+    padding: 0.75em;
+}
+
+.cta-check-reservation:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(165, 28, 48, 0.92);
+}
+
+@media (max-width: 976px) {
+    .card {
+        width: 28%;
+    }
+}
+
+@media (max-width: 650px) {
+    .header a:first-child, .header a:last-child {
+        display: none;
+    }
+
+    .header-left, .header-right {
+        display: none;
+    }
+    
+    .parent-container{
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        padding-block: 2em;
+        height: 82vh;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        overflow-y: scroll;
+        padding-block: 2em;
+    }
+
+    .card {
+        width: 60%;
+        flex: 0 0 auto;
+        transform: translateY(0);
+        transform: translateX(1000%);
+    }
+
+    #football.active,
+    #basketball.active,
+    #tennis.active {
+        margin-bottom: 20em;
+    }
+
+    @keyframes fadeInCard{
+    0% {
+        opacity: 0;
+        transform: translateX(500%);
+    }
+
+    90% {
+        opacity: 0.9;
+        transform: translateX(-5%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+}
+
+@media (max-width: 375px) {
+    h1 > a{
+        font-size: 2.5rem;
+    }
+    #dropdown{
+        width: 50vw;
+    }
+}
+

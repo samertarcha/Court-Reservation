@@ -1,0 +1,170 @@
+body {
+    overflow: hidden;
+}
+
+main {
+    position: relative;
+    overflow: visible;
+}
+
+.reservation-table-container {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    overflow: visible;
+}
+
+.box {
+    width: 32%;
+    margin-bottom: 2em;
+    text-align: center;
+    overflow: visible;
+
+    animation-name: backToInitial;
+    animation-duration: 900ms;
+    animation-timing-function: ease-in-out;
+    transform: translateY(500%);
+    animation-fill-mode: forwards;
+}
+
+.box h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5em;
+}
+
+.box-two {
+    animation-delay: 200ms;
+}
+
+.box-three {
+    animation-delay: 400ms;
+}
+
+.display-reservations {
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+table {
+    text-align: center;
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    width: 100%;
+    box-shadow: var(--primary-boxShadow);
+}
+
+table thead tr {
+    height: 6rem;
+    background: var(--primary-red);
+}
+
+table tbody tr {
+    height: 5rem;
+}
+
+table tbody tr:last-child {
+    border: 0;
+}
+
+th {
+    font-family: OpenSans-Regular;
+    font-size: 1.8rem;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: unset;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+tbody tr {
+    font-family: OpenSans-Regular;
+    font-size: 1.5rem;
+    color: #808080;
+    line-height: 1.2;
+    font-weight: unset;
+    }
+
+tbody tr:hover {
+    color: #555555;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+td a{
+    margin-inline: .25em;
+    padding: .25em .5em;
+}
+
+.btn{
+    cursor: pointer;
+    color: white;
+    border-radius: .3rem;
+}
+
+.update{
+    background-color: rgb(0, 102, 255);
+}
+
+.delete{
+    background-color: red;
+}
+
+@media (max-width: 650px) {
+
+    html{
+        overflow-y: auto;
+    }
+
+    .header a:first-child, .header a:last-child {
+        display: none;
+    }
+
+    .reservation-table-container {
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+    }
+
+    .box{
+        width: 90%;
+        margin-bottom: 5em;
+        transform: translateY(0);
+        transform: translateX(500%);
+    }
+
+    .header-left, .header-right {
+        display: none;
+    }
+
+    @keyframes fadeInCard{
+    0% {
+        opacity: 0;
+        transform: translateX(500%);
+    }
+
+    90% {
+        opacity: 0.9;
+        transform: translateX(-5%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+}
+
+@media (max-width: 375px) {
+    h1 > a{
+        font-size: 2.5rem;
+    }
+    #dropdown{
+        width: 50vw;
+    }
+}

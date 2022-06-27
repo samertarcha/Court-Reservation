@@ -1,0 +1,95 @@
+body {
+    overflow: hidden;
+}
+
+#background {
+    background-image: url('../img/grass.jpg');
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.header {
+    position: absolute;
+    font-size: 2rem;
+    
+    border-radius: 4rem;
+    padding: 0.5em 2em;
+    color: var(--white-background);
+    text-align: center;
+    justify-self: center;
+    margin-top: 2em;
+    
+    transform: translateY(-900%);
+    animation: backToInitial 600ms ease-out forwards;
+}
+
+.head-container {
+    display: flex;
+    justify-content: center;
+    padding: 3em 0;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 10rem);
+}
+
+.btn-container {
+    display: flex;
+    overflow: visible;
+    width: 100vw;
+    gap: 5em;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 1em;
+}
+
+.btn {
+    color: var(--white-background);
+    background-color: var(--primary-red);
+
+    border-radius: 1em;
+    padding: 0.25em 1em;
+    font-size: 2.5rem;
+    transform: translateY(5000%);
+    animation: backToInitial 750ms ease forwards;
+}
+
+.btn:hover {
+    color: var(--primary-red);
+    background-color: var(--white-background);
+}
+
+.btn-2 {
+    animation-delay: 200ms;
+}
+
+.btn-3 {
+    animation-delay: 400ms;
+}
+
+@media (max-width: 750px) {
+    .btn-container {
+        gap: 3em;
+    }
+}
+
+@media (max-width: 650px) {
+    .btn-container{
+        flex-direction: column;
+    }
+
+    .btn {
+        transform: translateY(0);
+        transform: translateX(1000%);
+    }
+}
+
+

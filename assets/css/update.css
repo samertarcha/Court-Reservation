@@ -1,0 +1,162 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 60%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1em;
+    border-radius: 2em;
+}
+
+.card h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.card i{
+    font-size: 1.5rem;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+}
+
+.update-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+}
+
+.display-reservations table {
+    width: 100%;
+    text-align: center;
+}
+
+table th {
+    font-size: 1.5rem;
+    padding-inline: 1em;
+}
+table td {
+    font-size: 1.25rem;
+    padding-inline: 1em;
+}
+
+.day-time-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2em;
+    gap: 1em;
+}
+
+.day-time-selector label{
+    font-weight: bold;
+}
+
+.time-selector {
+    display: flex;
+    gap: 0.5em;
+    padding: 1em;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2em;
+}
+
+.from-to-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.day-selector {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1em;
+    gap: 0.5em;
+}
+
+.day-label {
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+input[type="date"] {
+    background-color: #a51c30;
+    color: white;
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+::-webkit-calendar-picker-indicator {
+    background-color: #ffffff;
+    border-radius: 0.3rem;
+    padding: 0.25em;
+    cursor: pointer;
+}
+
+.time-label {
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+input[type="time"] {
+    background-color: #a51c30;
+    color: white;
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.from-to-time-label {
+    font-size: 1.75rem;
+}
+
+.btn {
+    background-color: #a51c30;
+    font-size: 2rem;
+    border: none;
+    color: rgba(255, 255, 255, 0.946);
+    padding: 0.25em 0.75em;
+    border-radius: 3em;
+    margin-right: 0.5em;
+    transition: transform 250ms;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: rgba(0, 0, 0, 0.946);
+}
+
+
+
+@media (max-width: 650px) {
+    .day-selector,
+    .time-selector {
+        flex-direction: column;
+    }
+}
+
